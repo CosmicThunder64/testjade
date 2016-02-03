@@ -1,0 +1,10 @@
+{
+    "name": "testjade",
+    "version": "1.0.0",
+    "manifest_version": 1,
+    "project_type": "application",
+    "executable_type": "scratch",
+    "executable": "testjade.xml",
+    "author": "CosmicThunder64",
+    "minimum_firmware_version": 42
+}
