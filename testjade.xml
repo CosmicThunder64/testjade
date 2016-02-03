@@ -1,35 +1,70 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="304" inline="false" x="-319" y="286">
+  <block type="controls_whileUntil" id="553" inline="false" x="-396" y="41">
     <field name="MODE">UNTIL</field>
     <value name="NUMBER">
-      <block type="sensor_button" id="343">
+      <block type="sensor_button" id="577">
         <field name="OBJECT">ENTER</field>
       </block>
     </value>
     <statement name="DO">
-      <block type="oled_cleardisplay" id="418">
+      <block type="movement_forward" id="563">
         <next>
-          <block type="oled_drawtext" id="428">
-            <field name="TEXT">Green=</field>
+          <block type="robot_delay" id="574" inline="true">
+            <value name="DELAY">
+              <block type="math_number" id="578">
+                <field name="NUM">100</field>
+              </block>
+            </value>
             <next>
-              <block type="oled_drawnumber" id="437" inline="true">
-                <value name="NUMBER">
-                  <block type="sensor_spectrometer" id="335">
+              <block type="controls_if" id="528" inline="false">
+                <value name="IF0">
+                  <block type="sensor_spectrometer" id="579">
                     <field name="LIGHT">GREEN</field>
                   </block>
                 </value>
+                <statement name="DO0">
+                  <block type="movement_stop" id="592"></block>
+                </statement>
                 <next>
-                  <block type="oled_setcursor" id="504" inline="true">
-                    <value name="STARTX">
-                      <block type="math_number" id="518">
-                        <field name="NUM">0</field>
+                  <block type="controls_whileUntil" id="304" inline="false">
+                    <field name="MODE">UNTIL</field>
+                    <value name="NUMBER">
+                      <block type="sensor_button" id="343">
+                        <field name="OBJECT">ENTER</field>
                       </block>
                     </value>
-                    <value name="STARTY">
-                      <block type="math_number" id="519">
-                        <field name="NUM">10</field>
+                    <statement name="DO">
+                      <block type="oled_cleardisplay" id="418">
+                        <next>
+                          <block type="oled_drawtext" id="428">
+                            <field name="TEXT">Green=</field>
+                            <next>
+                              <block type="oled_drawnumber" id="437" inline="true">
+                                <value name="NUMBER">
+                                  <block type="sensor_spectrometer" id="335">
+                                    <field name="LIGHT">GREEN</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="oled_setcursor" id="504" inline="true">
+                                    <value name="STARTX">
+                                      <block type="math_number" id="518">
+                                        <field name="NUM">0</field>
+                                      </block>
+                                    </value>
+                                    <value name="STARTY">
+                                      <block type="math_number" id="519">
+                                        <field name="NUM">10</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
                       </block>
-                    </value>
+                    </statement>
                   </block>
                 </next>
               </block>
