@@ -16,43 +16,29 @@
               </block>
             </value>
             <next>
-              <block type="oled_setend" id="715" inline="true">
-                <value name="ENDX">
-                  <block type="math_number" id="716">
-                    <field name="NUM">10</field>
-                  </block>
-                </value>
-                <value name="ENDY">
-                  <block type="math_number" id="717">
-                    <field name="NUM">0</field>
-                  </block>
-                </value>
-                <next>
-                  <block type="controls_if" id="528" inline="false">
-                    <mutation else="1"></mutation>
-                    <value name="IF0">
-                      <block type="logic_compare" id="634" inline="true">
-                        <field name="OP">LT</field>
-                        <value name="A">
-                          <block type="sensor_spectrometer" id="579">
-                            <field name="LIGHT">GREEN</field>
-                          </block>
-                        </value>
-                        <value name="B">
-                          <block type="math_number" id="653">
-                            <field name="NUM">80</field>
-                          </block>
-                        </value>
+              <block type="controls_if" id="528" inline="false">
+                <mutation else="1"></mutation>
+                <value name="IF0">
+                  <block type="logic_compare" id="634" inline="true">
+                    <field name="OP">LT</field>
+                    <value name="A">
+                      <block type="sensor_spectrometer" id="579">
+                        <field name="LIGHT">GREEN</field>
                       </block>
                     </value>
-                    <statement name="DO0">
-                      <block type="movement_forward" id="673"></block>
-                    </statement>
-                    <statement name="ELSE">
-                      <block type="movement_stop" id="592"></block>
-                    </statement>
+                    <value name="B">
+                      <block type="math_number" id="653">
+                        <field name="NUM">80</field>
+                      </block>
+                    </value>
                   </block>
-                </next>
+                </value>
+                <statement name="DO0">
+                  <block type="movement_forward" id="673"></block>
+                </statement>
+                <statement name="ELSE">
+                  <block type="movement_stop" id="592"></block>
+                </statement>
               </block>
             </next>
           </block>
