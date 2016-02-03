@@ -21,9 +21,10 @@
     </statement>
     <next>
       <block type="controls_if" id="528" inline="false">
+        <mutation else="1"></mutation>
         <value name="IF0">
           <block type="logic_compare" id="634" inline="true">
-            <field name="OP">GT</field>
+            <field name="OP">LT</field>
             <value name="A">
               <block type="sensor_spectrometer" id="579">
                 <field name="LIGHT">GREEN</field>
@@ -37,6 +38,9 @@
           </block>
         </value>
         <statement name="DO0">
+          <block type="movement_forward" id="673"></block>
+        </statement>
+        <statement name="ELSE">
           <block type="movement_stop" id="592"></block>
         </statement>
         <next>
