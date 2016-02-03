@@ -1,26 +1,28 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="304" inline="false" x="-333" y="220">
+  <block type="controls_whileUntil" id="304" inline="false" x="-319" y="286">
     <field name="MODE">UNTIL</field>
     <value name="NUMBER">
-      <block type="sensor_spectrometer" id="335">
-        <field name="LIGHT">GREEN</field>
+      <block type="sensor_button" id="343">
+        <field name="OBJECT">ENTER</field>
       </block>
     </value>
     <statement name="DO">
-      <block type="movement_forward" id="10">
+      <block type="oled_cleardisplay" id="418">
         <next>
-          <block type="robot_delay" id="12" inline="true">
-            <value name="DELAY">
-              <block type="math_number" id="20">
-                <field name="NUM">100</field>
+          <block type="oled_drawtext" id="428">
+            <field name="TEXT">Green=</field>
+            <next>
+              <block type="oled_drawnumber" id="437" inline="true">
+                <value name="NUMBER">
+                  <block type="sensor_spectrometer" id="335">
+                    <field name="LIGHT">GREEN</field>
+                  </block>
+                </value>
               </block>
-            </value>
+            </next>
           </block>
         </next>
       </block>
     </statement>
-    <next>
-      <block type="movement_stop" id="30"></block>
-    </next>
   </block>
 </xml>
