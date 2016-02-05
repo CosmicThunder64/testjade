@@ -44,8 +44,8 @@
                               </block>
                             </value>
                             <value name="STARTY">
-                              <block type="math_number" id="94">
-                                <field name="NUM">10</field>
+                              <block type="math_number" id="126">
+                                <field name="NUM">20</field>
                               </block>
                             </value>
                             <next>
@@ -59,8 +59,8 @@
                                       </block>
                                     </value>
                                     <value name="STARTY">
-                                      <block type="math_number" id="126">
-                                        <field name="NUM">20</field>
+                                      <block type="math_number" id="94">
+                                        <field name="NUM">10</field>
                                       </block>
                                     </value>
                                   </block>
