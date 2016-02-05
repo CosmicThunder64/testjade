@@ -35,7 +35,7 @@
                   <block type="oled_cleardisplay" id="47">
                     <next>
                       <block type="oled_drawtext" id="57">
-                        <field name="TEXT">I've reached Schiaparelli</field>
+                        <field name="TEXT">I've reached</field>
                         <next>
                           <block type="oled_setcursor" id="74" inline="true">
                             <value name="STARTX">
@@ -48,6 +48,25 @@
                                 <field name="NUM">10</field>
                               </block>
                             </value>
+                            <next>
+                              <block type="oled_drawtext" id="123">
+                                <field name="TEXT">Schiaparelli</field>
+                                <next>
+                                  <block type="oled_setcursor" id="124" inline="true">
+                                    <value name="STARTX">
+                                      <block type="math_number" id="125">
+                                        <field name="NUM">10</field>
+                                      </block>
+                                    </value>
+                                    <value name="STARTY">
+                                      <block type="math_number" id="126">
+                                        <field name="NUM">20</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
                           </block>
                         </next>
                       </block>
