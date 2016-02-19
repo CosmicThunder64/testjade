@@ -16,12 +16,12 @@
                 <field name="OP">LT</field>
                 <value name="A">
                   <block type="sensor_spectrometer" id="6">
-                    <field name="LIGHT">YELLOW</field>
+                    <field name="LIGHT">BLUE</field>
                   </block>
                 </value>
                 <value name="B">
                   <block type="math_number" id="7">
-                    <field name="NUM">45</field>
+                    <field name="NUM">80</field>
                   </block>
                 </value>
               </block>
